@@ -30,6 +30,8 @@ def detectLang(filename):
     file = open(filename)
     tmpDecision = []
     for line in file:
+        if line == "" or line == "\n":
+            continue
         line = re.sub(r'\_', " ", re.sub(
             r"[^\w\s]", " ", line.strip().lower()))
         lang = detect(line)
@@ -56,6 +58,8 @@ def findFrequentWords(filename, outputfile, numHash, numColumns):
     minSketchCount = {}
     countMinSketch = CountMinSketch(numColumns, numHash)
     for line in f:
+        if line == "" or line == "\n":
+            continue
         line = re.sub(r'\_', " ", re.sub(
             r"[^\w\s]", " ", line.strip().lower()))
         line = re.split(r" +", line)
