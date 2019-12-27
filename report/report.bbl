@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{bigdata}
+Andrii Gakhov,
+\newblock ``How to count big data: Probabilistic data structures and
+  algorithms'',
+\newblock
+  \url{https://www.kdnuggets.com/2019/08/count-big-data-probabilistic-data-structures-algorithms.html},
+  2019.
+
+\bibitem{gutenberg}
+``{Project Gutenberg}'',
+\newblock \url{https://www.gutenberg.org/}.
+
+\end{thebibliography}

@@ -1,0 +1,156 @@
+This is TeX, Version 3.14159265 (TeX Live 2017/Debian) (preloaded format=tex 2019.9.26)  20 DEC 2019 17:07
+**caption.ins
+(./caption.ins (/usr/share/texlive/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count26
+\emptyLines=\count27
+\processedLines=\count28
+\commentsRemoved=\count29
+\commentsPassed=\count30
+\codeLinesPassed=\count31
+\TotalprocessedLines=\count32
+\TotalcommentsRemoved=\count33
+\TotalcommentsPassed=\count34
+\TotalcodeLinesPassed=\count35
+\NumberOfFiles=\count36
+\inFile=\read0
+\inputcheck=\read1
+\@tempcnta=\count37
+\off@0=\count38
+\off@1=\count39
+\off@2=\count40
+\off@3=\count41
+\off@4=\count42
+\off@5=\count43
+\off@6=\count44
+\off@7=\count45
+\off@8=\count46
+\off@9=\count47
+\off@10=\count48
+\off@11=\count49
+\off@12=\count50
+\off@13=\count51
+\off@14=\count52
+\off@15=\count53
+\@temptokena=\toks12
+\@maxfiles=\count54
+\@maxoutfiles=\count55
+
+Utility: `docstrip' 2.5e <2014/09/29>
+English documentation    <2017/03/13>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+(./caption.ins
+
+Generating file(s) caption.sty 
+\openout0 = `caption.sty'.
+
+
+Processing file caption.dtx (package) -> caption.sty
+File caption.dtx ended by \endinput.
+Lines  processed: 4532
+Comments removed: 3035
+Comments  passed: 7
+Codelines passed: 1486
+
+
+Generating file(s) caption2.sty 
+\openout0 = `caption2.sty'.
+
+
+Processing file caption2.dtx (package) -> caption2.sty
+File caption2.dtx ended by \endinput.
+Lines  processed: 1383
+Comments removed: 950
+Comments  passed: 0
+Codelines passed: 428
+
+
+Generating file(s) caption3.sty 
+\openout0 = `caption3.sty'.
+
+
+Processing file caption3.dtx (package) -> caption3.sty
+File caption3.dtx ended by \endinput.
+Lines  processed: 3918
+Comments removed: 2290
+Comments  passed: 1
+Codelines passed: 1623
+
+
+Generating file(s) bicaption.sty 
+\openout0 = `bicaption.sty'.
+
+
+Processing file bicaption.dtx (package) -> bicaption.sty
+File bicaption.dtx ended by \endinput.
+Lines  processed: 1382
+Comments removed: 1088
+Comments  passed: 0
+Codelines passed: 290
+
+
+Generating file(s) ltcaption.sty 
+\openout0 = `ltcaption.sty'.
+
+
+Processing file ltcaption.dtx (package) -> ltcaption.sty
+File ltcaption.dtx ended by \endinput.
+Lines  processed: 906
+Comments removed: 697
+Comments  passed: 0
+Codelines passed: 205
+
+
+Generating file(s) subcaption.sty 
+\openout0 = `subcaption.sty'.
+
+
+Processing file subcaption.dtx (package) -> subcaption.sty
+File subcaption.dtx ended by \endinput.
+Lines  processed: 1268
+Comments removed: 1084
+Comments  passed: 0
+Codelines passed: 180
+
+
+Generating file(s) totalcount.sty 
+\openout0 = `totalcount.sty'.
+
+
+Processing file totalcount.dtx (package) -> totalcount.sty
+File totalcount.dtx ended by \endinput.
+Lines  processed: 383
+Comments removed: 287
+Comments  passed: 0
+Codelines passed: 92
+
+***********************************************************
+*
+* To finish the installation you have to move the files
+* `caption.sty', `caption2.sty', 'caption3.sty',
+* `bicaption.sty', `ltcaption.sty', `subcaption.sty',
+* and `totalcount.sty' into a directory searched by TeX.
+*
+* To produce the documentation run the file
+* `caption-eng.tex' (English version) or `caption-rus.tex'
+* (Russian version) or `caption-deu.tex' (German version)
+* through LaTeX.
+*
+***********************************************************
+)
+Overall statistics:
+Files  processed: 7
+Lines  processed: 13772
+Comments removed: 9431
+Comments  passed: 8
+Codelines passed: 4304
+ ) )
+No pages of output.

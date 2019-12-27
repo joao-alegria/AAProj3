@@ -1,0 +1,142 @@
+This is TeX, Version 3.14159265 (TeX Live 2017/Debian) (preloaded format=tex 2019.9.26)  20 DEC 2019 17:05
+**subcaption.dtx
+(./subcaption.dtx
+! Undefined control sequence.
+l.32 \NeedsTeXFormat
+                    {LaTeX2e}[1994/12/01]
+? 
+! Undefined control sequence.
+l.33 \ProvidesFile
+                  {subcaption.drv}[2019/09/10 v1.3 Adds a sub-caption featur...
+
+? 
+\hbadness=\count26
+! Undefined control sequence.
+l.37 \documentclass
+                   {ltxdoc}
+? 
+! Undefined control sequence.
+l.38 \setlength
+               \parindent{0pt}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.38 \setlength\parindent{
+                          0pt}
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.38 \setlength\parindent{
+                          0pt}
+? 
+! Undefined control sequence.
+l.39 \setlength
+               \parskip{\smallskipamount}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   {
+l.39 \setlength\parskip{
+                        \smallskipamount}
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   {
+l.39 \setlength\parskip{
+                        \smallskipamount}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.39 \setlength\parskip{\smallskipamount}
+                                         
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.39 \setlength\parskip{\smallskipamount}
+                                         
+? 
+! Undefined control sequence.
+l.41 \newcommand
+                \LineBreak{\linebreak[3]}
+? 
+! Undefined control sequence.
+l.41 \newcommand\LineBreak
+                          {\linebreak[3]}
+? 
+! Undefined control sequence.
+l.41 \newcommand\LineBreak{\linebreak
+                                     [3]}
+? 
+! Undefined control sequence.
+l.42 \newcommand
+                \PageBreak{\pagebreak[3]}
+? 
+! Undefined control sequence.
+l.42 \newcommand\PageBreak
+                          {\pagebreak[3]}
+? 
+! Undefined control sequence.
+l.42 \newcommand\PageBreak{\pagebreak
+                                     [3]}
+? 
+! Undefined control sequence.
+l.43 \usepackage
+                {ifpdf}
+? 
+! Undefined control sequence.
+l.44 \ifpdf
+           
+? 
+! Undefined control sequence.
+l.45   \usepackage
+                  {mathptmx,courier}
+? 
+! Undefined control sequence.
+l.46   \usepackage
+                  [scaled=0.90]{helvet}
+? 
+! Undefined control sequence.
+l.47   \addtolength
+                   \marginparwidth{15pt}
+? 
+! Undefined control sequence.
+l.47   \addtolength\marginparwidth
+                                  {15pt}
+? 
+! Undefined control sequence.
+l.48   \ifdim\paperheight
+                         =297mm % a4paper
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.48   \ifdim\paperheight=
+                          297mm % a4paper
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   =
+l.48   \ifdim\paperheight=
+                          297mm % a4paper
+? 
+! Extra \fi.
+l.52 \fi
+        
+? 
+! Undefined control sequence.
+l.54 \usepackage
+                [bottom]{footmisc}
+? 
+! Undefined control sequence.
+l.55 \usepackage
+                {array,graphicx,overpic,pict2e,diagbox}
+? 
+! Undefined control sequence.
+l.57 \PassOptionsToPackage
+                          {breaklinks=true}{hyperref}
+? X
+No pages of output.
