@@ -1,38 +1,147 @@
-%
-% General structure for the revdetua class:
-%
-\documentclass[]{revdetua}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{tabularx}
-\usepackage{subcaption}
+\documentclass[shortpaper]{revdetua}
+
+\usepackage{scicite}
+\usepackage{hyperref}
+
+\usepackage{amsmath}
 \usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{enumitem}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{subcaption}
+
+\usepackage{verbatim}
+
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+ 
+\Header{2}{85122}{Dezembro}{2019}{1}
 
-\Header{1}{85048}{Dec}{2019}{1}
-% Note: the month must be in Portuguese
+\title{
+    \LARGE{{\bf Project 3: Frequent Items Counting \/}}
+    \vspace{-20pt}
+}
 
-\title{Literary Work Word Approximate Occurrence Counters \\ Algorithms Evaluation}
-\author{João Pedro Simões Alegria, 85048, MEI} % or \author{... \and ...}
+\author{
+    \Large{{\bf A Study on Memory-Efficient Algorithms\/}}\\\\\\
+    Filipe Pires [85122] \& João Alegria [85048]\\
+    \\
+    {\bf Advanced Algorithms\/}\\
+    \normalsize{Department of Electronics, Telecommunications and Informatics}\\
+    \normalsize{University of Aveiro}\\
+} 
+
 \maketitle
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{abstract}
+    Lorem ipsum ...
 \end{abstract}
 
-
-\begin{keywords}% optional
+\begin{keywords}
+    Probabilistic Counter, Count-Min Sketch, Memory-Efficient Algorithms
 \end{keywords}
 
-\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Dataset}
-for bibtex \cite{gutenberg}
+\section{Problem Contextualization}
 
-\subsection{Language Comparison}
+This report was written for the course of 'Advanced Algorithms', taught by 
+professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA.
+It describes the work done for the third assignment of the course \cite{trab3}.
+The chosen hypothesis was "Hipótese A-2 – Contagem dos Itens Mais Frequentes".
 
+Lorem ipsum ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Dataset}
+
+Lorem ipsum ...
+
+\setlist{nolistsep}
+\begin{itemize}
+    \item \textit{Alice in the Wonderland}, by Lewis Carol - written in English, German, French and Italian
+    \item \textit{A Christmas Carol}, by Charles Dickens - written in English, Finnish, German, Dutch and French
+    \item \textit{King Solomon's Mines}, by H. Rider Haggard - written in English, Finnish and Portuguese
+    \item \textit{Oliver Twist}, by Charles Dickens - written in English, French and German
+    \item \textit{The Adventures of Tom Sawyer}, by Mark Twain - written in English, Finnish, German and Catalan
+\end{itemize}
+
+Lorem ipsum ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Frequent Word Identification}
+
+Lorem ipsum ...
+
+\subsection{Exact Counter}
+
+Lorem ipsum ...
+
+\subsection{Count-Min Sketch}
+
+Lorem ipsum ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Literary Study}
+
+Lorem ipsum ...
+
+% {\setstretch{0.1}
+%     \begin{equation} \label{eq:2}
+%         E(word) = count \times \frac{1}{fixedProb}
+%     \end{equation}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Results \& Discussion}
+
+Lorem ipsum ...
+
+% \begin{table}[h!]
+% \centering
+% \begin{tabular}{@{}c|ccc@{}}
+% \toprule
+%                       & \textbf{EC} & \textbf{ACFP} & \textbf{ACLP} \\ \midrule
+% \textbf{All Words}    & 5116614     & 4886294       & 4797502 \\
+% \textbf{Top 10 Words} & 40899       & 22916         & 6635    \\ \bottomrule
+% \end{tabular}
+% \caption{Number of bytes used in the counter values.}
+% \end{table}
+% \vspace{-12pt}
+
+% \vspace{-10pt}
+% \captionsetup[figure]{labelformat=empty}
+% \begin{figure}[H]
+%     \centering
+%     \setlength{\belowcaptionskip}{-12pt}
+%     \includegraphics[width=\linewidth]{wordCount_ACC_DU.png}
+%     \caption{Fig. 1: Counter estimations for the top 10 words.} 
+%     \label{fig:1}
+% \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Conclusion}
-\bibliography{report}
+
+Lorem ipsum ...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{report.bib} 
+
+%\section*{Appendix}
 
 \end{document}

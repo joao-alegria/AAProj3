@@ -1,7 +1,7 @@
 %% 
 %% This is file `revdetua.cls'
 %%
-%% Created by Tomás Oliveira e Silva on March 1996 (current version, January 2012)
+%% Created by Tomï¿½s Oliveira e Silva on March 1996 (current version, January 2012)
 %%
 %% Based on article.cls, and the old ieeetran.sty
 %% 
@@ -606,7 +606,7 @@
 %%\Header{Volume}{Number}{Month}{Year}{Page}
 \def\@Hs#1{{\Tiny #1}}
 \def\@Hu#1#2.{\uppercase{#1}\@Hs{\uppercase{#2}}}
-\def\Publication{R\@Hs{EVISTA} \@Hs{DO} DETUA}
+\def\Publication{R\@Hs{EVISTA} \@Hs{DO} DETI UA}
 \def\Header#1#2#3#4#5{\global\def\lrmark{\Publication,
 V\@Hs{OL}. #1, N$^\circ$ #2, \@Hu #3. #4}\setcounter{page}{#5}}
 
