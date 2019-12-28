@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.16)  28 DEC 2019 00:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.16)  28 DEC 2019 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -458,31 +458,82 @@ Missing character: There is no “ in font cmr10!
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] (./report.bbl
+]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 116.
+
+<englishAlice100_5.png, id=28, 1387.584pt x 727.7589pt>
+File: englishAlice100_5.png Graphic file (type png)
+<use englishAlice100_5.png>
+Package pdftex.def Info: englishAlice100_5.png  used on input line 118.
+(pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
+<englishAlice1000_5.png, id=30, 1387.584pt x 727.7589pt>
+File: englishAlice1000_5.png Graphic file (type png)
+<use englishAlice1000_5.png>
+Package pdftex.def Info: englishAlice1000_5.png  used on input line 122.
+(pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
+<englishAlice10000_5.png, id=31, 1387.584pt x 727.7589pt>
+File: englishAlice10000_5.png Graphic file (type png)
+<use englishAlice10000_5.png>
+Package pdftex.def Info: englishAlice10000_5.png  used on input line 126.
+(pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
+<englishAlice1000_6.png, id=32, 1387.584pt x 727.7589pt>
+File: englishAlice1000_6.png Graphic file (type png)
+<use englishAlice1000_6.png>
+Package pdftex.def Info: englishAlice1000_6.png  used on input line 130.
+(pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
+<englishAlice1000_8.png, id=33, 1387.584pt x 727.7589pt>
+File: englishAlice1000_8.png Graphic file (type png)
+<use englishAlice1000_8.png>
+Package pdftex.def Info: englishAlice1000_8.png  used on input line 134.
+(pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
+<englishAlice1000_10.png, id=34, 1387.584pt x 727.7589pt>
+File: englishAlice1000_10.png Graphic file (type png)
+<use englishAlice1000_10.png>
+Package pdftex.def Info: englishAlice1000_10.png  used on input line 138.
+(pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 117--141
+[][] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 117--141
+[] []
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 117--141
+[] [] 
+ []
+
+(./report.bbl
 Missing character: There is no Ã in font cmr8!
 Missing character: There is no ­ in font cmr8!
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
  [2
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
-
-(./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+] [3 <./englishAlice100_5.png> <./englishAlice1000_5.png> <./englishAlice10000_
+5.png> <./englishAlice1000_6.png> <./englishAlice1000_8.png> <./englishAlice100
+0_10.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
+ (./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
  ) 
 Here is how much of TeX's memory you used:
- 7994 strings out of 494326
- 118913 string characters out of 6163849
- 222157 words of memory out of 5000000
- 11254 multiletter control sequences out of 15000+600000
- 10803 words of font info for 39 fonts, out of 8000000 for 9000
+ 8045 strings out of 494326
+ 119985 string characters out of 6163849
+ 222188 words of memory out of 5000000
+ 11295 multiletter control sequences out of 15000+600000
+ 10971 words of font info for 40 fonts, out of 8000000 for 9000
  352 hyphenation exceptions out of 8191
- 36i,8n,38p,849b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,39p,892b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
@@ -493,12 +544,12 @@ ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.p
-fb>
-Output written on report.pdf (2 pages, 151297 bytes).
+mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on report.pdf (3 pages, 369109 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 109 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

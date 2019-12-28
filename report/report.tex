@@ -68,7 +68,7 @@ As a extra task, because the dataset are books, if using their translations, we 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Dataset}
+\section{Dataset}\label{dataset}
 
 The dataset used, as already mentioned in Section \ref{problem}, is based on literary works and in some of their translations. All of the books were obtained from \textit{Project Gutenberg}\cite{gutenberg}. The chosen books and respective idioms are presented below:
 
@@ -101,14 +101,45 @@ Lorem ipsum ...
 
 \section{Literary Study}
 
-Lorem ipsum ...
+As a form of automation and to enable us to quickly study the behavior of the chosen algorithm when changing some of the necessary parameters for the correct functioning of the program we decided to create a script in Python3 that resolved all our problems. The signature of that script is as follows:
 
-% {\setstretch{0.1}
-%     \begin{equation} \label{eq:2}
-%         E(word) = count \times \frac{1}{fixedProb}
-%     \end{equation}
-% }
+\begin{center}
+    \begin{verbatim}
+    python3 frequentWordFinder.py [-h] 
+    [-o outputFolder] [-d numHash] 
+    [-m numColumns] <inputFolder>
+    \end{verbatim}
+\end{center}
 
+Where the \textit{outputFolder} is a optional parameter that indicates the folder where the resulting files should be stored, the \textit{numHash} is also an optional parameter and is the number of hashes the user wants for the script to use when creating the \texttt{CountMinSketch} object; \textit{numColumns} is also optional and is the number of columns used also when creating the \texttt{CountMinSketch} object, which as already explained in \ref{algs}, is the space allocated to when storing the hashing results, and the bigger the better since that will cause less conflicts. Lastly the input folder is a mandatory parameters since it's the folder where the source data should be present; this data should be already preprocessed, since that will generate the best results, without any noise form the headers and annotations mentioned in \ref{dataset}.
+
+\begin{figure*}[]
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice100_5.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_5.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice10000_5.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_6.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_8.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_10.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \caption{Caption place holder}
+\end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Results \& Discussion}

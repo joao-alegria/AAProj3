@@ -2,6 +2,9 @@
 Name: João Pedro Simões Alegria
 NMEC: 85048
 
+Name: Filipe Neto Pires
+NMEC: 85122
+
 Main Script that counts the words of a given book
 Uses exact counting, fixed probability counting and decreasing logarithmic probability counting.
 """
