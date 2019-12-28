@@ -1,14 +1,25 @@
 \begin{thebibliography}{1}
 
+\bibitem{alegria}
+João Alegria,
+\newblock ``Literary work word approximate accurrence counters''.
+
+\bibitem{filipe}
+Filipe Pires,
+\newblock ``Project 2: Word counting in large texts''.
+
 \bibitem{trab3}
 Joaquim Madeira,
-\newblock ``3o trabalho - algoritmos probabilísticos'',
-\newblock
-  \url{https://elearning.ua.pt/pluginfile.php/1514391/mod_resource/content/0/AA_1920_Trab_2.pdf}.
+\newblock ``3o trabalho - algoritmos avançados''.
 
 \bibitem{gutenberg}
 Michael Hart,
 \newblock ``Free ebooks - project gutenberg'',
 \newblock \url{https://www.gutenberg.org/}.
+
+\bibitem{stop-words}
+Python~SW Foundation,
+\newblock ``Pypi - stop-words'',
+\newblock \url{https://pypi.org/project/stop-words/}.
 
 \end{thebibliography}

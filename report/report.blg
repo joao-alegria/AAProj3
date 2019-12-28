@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2019/Arch Linux)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: report.aux
 The style file: e-revdetua.bst
-Database file #1: report.bib.bib
-You've used 2 entries,
+Database file #1: report.bib
+You've used 5 entries,
             1840 wiz_defined-function locations,
-            426 strings with 3029 characters,
-and the built_in function-call counts, 280 in all, are:
-= -- 20
-> -- 8
+            435 strings with 3145 characters,
+and the built_in function-call counts, 637 in all, are:
+= -- 41
+> -- 20
 < -- 0
-+ -- 4
-- -- 2
-* -- 10
-:= -- 47
-add.period$ -- 2
-call.type$ -- 2
-change.case$ -- 2
++ -- 10
+- -- 5
+* -- 19
+:= -- 95
+add.period$ -- 5
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 10
-empty$ -- 39
-format.name$ -- 2
-if$ -- 63
+cite$ -- 5
+duplicate$ -- 25
+empty$ -- 96
+format.name$ -- 5
+if$ -- 147
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 5
 missing$ -- 0
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 10
+newline$ -- 25
+num.names$ -- 5
+pop$ -- 25
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 12
+skip$ -- 36
 stack$ -- 0
 substring$ -- 0
-swap$ -- 2
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 2
-width$ -- 3
-write$ -- 20
+while$ -- 5
+width$ -- 6
+write$ -- 41

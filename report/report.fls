@@ -16,8 +16,8 @@ INPUT /usr/share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 INPUT /usr/share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 INPUT /usr/share/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/share/texmf-dist/tex/latex/url/url.sty
-INPUT /usr/share/texmf-dist/tex/latex/cite/cite.sty
-INPUT /usr/share/texmf-dist/tex/latex/cite/cite.sty
+INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/cite.sty
+INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/cite.sty
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/scicite.sty
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/scicite.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -55,8 +55,8 @@ INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/multicol.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/multicol.sty
-INPUT /usr/share/texmf-dist/tex/latex/setspace/setspace.sty
-INPUT /usr/share/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/setspace.sty
+INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/setspace.sty
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/enumitem.sty
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/enumitem.sty
 INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -79,8 +79,8 @@ INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/subcaption.sty
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/subcaption.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/verbatim.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/verbatim.sty
-INPUT /usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
-INPUT /usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/booktabs.sty
+INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/booktabs.sty
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux
 OUTPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux
@@ -129,10 +129,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.bbl
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.bbl
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.out
 INPUT /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.out
@@ -140,6 +141,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
@@ -147,4 +149,5 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb

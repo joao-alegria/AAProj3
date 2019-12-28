@@ -43,7 +43,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-    Lorem ipsum ...
+    Determining the most frequent items on a data stream has many applications and is a hot topic on the research community of the field.
+    The challenges inherent of data stream processing in a memory efficient way are very much worth exploring and some of the existing solutions already provide
+    with great optimization strategies.
+
+    In this report, we focus on one of the most famous approximate counters to determine an estimation of the most frequent words of literary works from several 
+    authors in several languages and compare it to an exact counter.
+    We also present a few conclusions drawn from the study applied to the dataset.
 \end{abstract}
 
 \begin{keywords}
@@ -54,23 +60,36 @@
 
 \section{Problem Contextualization}\label{problem}
 
-This report was written for the course of 'Advanced Algorithms', taught by 
-professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA.
-It describes the work done for the third assignment of the course \cite{trab3}.
-The chosen hypothesis was "Hipótese A-2 – Contagem dos Itens Mais Frequentes".
+When dealing with large datasets there are many operations that require the calculation of properties of each element. 
+The presence of frequent events throughout the data might be a potential aspect worth exploring.
+However, counting problems present obstacles when dealt with in very large contexts, and the difficulties are undoubtedly accentuated when the contexts morph 
+into data streams.
+As continuous sources of real time events, data streams present big challenges when processing each event in a precise and reliable way.
+Many solutions have appeared throughout the years as means of dealing with these challenges by creating reliable approximations that, without using too many 
+resources, still permit inferring the same conclusions that one is in search of.
+These solutions are typically based on probabilistic approaches that do not compromise the results but add an error factor. 
 
-One of the subjects studied in this course was the counting problems and the obstacles that appear when dealing with this type of problems in very large contexts. The difficulties appear even more when the contexts morph into the newest, fastest and the form that delivers the most amount of information, the data streams. Being a continuous source of real time events, processing the events that happen in a precise and reliable way can be more ofter than not very challenging and sometimes impossible. Many solutions appear in hopes of creating reliable approximations that without using the as many resources still permit inferring the same conclusions. This solutions use many times probabilistic approaches or some kind of mapping that allows some form of overlapping of the data without compromising the results, such as hashing. 
+The previous works of both authors of this paper address the application of approximate counters with fixed or descending probabilities of updating counts on 
+the context of word counting in literary works \cite{alegria} \cite{filipe}.
+This time, the same literary works will be used to estimate the most frequent words, with the text corpus considered as data streams with the help of a different 
+and more complex strategy to reduce resource usage.
+This report was written for the course of 'Advanced Algorithms', taught by professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA and 
+it describes the work done for the course's 3rd assignment \cite{trab3}. 
+We chose the hypothesis "Hipótese A-2 – Contagem dos Itens Mais Frequentes" as we were interested in knowing how low could memory usage go without compromising
+the outcome, i.e. how much memory could be saved while ensuring that the code still accomplished its purpose and returned approximations not too distant from 
+the exact counters' values.
 
-This theme was already a subject for previous works, but since it is an area so vast and with so many different approaches, each one with its advantages and disadvantages, the professor decided to list it again for the possible report themes in this last project, but this time with more complex and refined algorithms that use memory and resources in a more intelligent way. We ended up choosing this theme since we are interested in knowing how lower can the resource usage go without compromising the outcome of the model, meaning that the conclusions taken from the approximations made by the model are not too distant from the ones taken from the exact counters.
-
-In the context of literary works as source of text, we create data streams to simulate a real world scenario and test the effectiveness and performance of one of the proposed algorithms. Some of those proposed algorithms were the one from Misra \& Gries(Frequent-Count), the one from Manku \& Motwani(SLossy-Count), the one from Metwally(Space-Saving-Count) and lastly the Count-Min Sketch. We choose to analyze the last one, algorithm that will be further described in Section \ref{algs}.
-As a extra task, because the dataset are books, if using their translations, we can also discuss if the most common words in one language are the as the ones found in another, which we can expect to be similar since the story is the same.
+We create data streams to simulate a real world scenario and test the effectiveness and performance of the algorithm Count-Min Sketch.
+Other available alternatives were: Frequent-Count, proposed by Misra \& Gries; Lossy-Count, by Manku \& Motwani; Space-Saving-Count, by Metwally.
+We also discuss the differences and similarities between book translations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Dataset}\label{dataset}
 
-The dataset used, as already mentioned in Section \ref{problem}, is based on literary works and in some of their translations. All of the books were obtained from \textit{Project Gutenberg}\cite{gutenberg}. The chosen books and respective idioms are presented below:
+The dataset used, as already mentioned in Section \ref{problem}, is based on literary works and in some of their translations. 
+All of the books were obtained from \textit{Project Gutenberg}\cite{gutenberg}. 
+The chosen books and respective languages are presented below:
 
 \setlist{nolistsep}
 \begin{itemize}
@@ -81,21 +100,63 @@ The dataset used, as already mentioned in Section \ref{problem}, is based on lit
     \item \textit{The Adventures of Tom Sawyer}, by Mark Twain - written in English, Finnish, German and Catalan
 \end{itemize}
 
-Since provident from the \textit{Project Gutenberg}, the books are provided with some headers and annotations that identify the author, the source and some additional metadata that was not relevant for our study; for that reason we proceeded to execute a quick preprocessing over the various book files to remove that metadata that could cause unwanted variation of results. This process was quite simple and was only necessary the usage of a text editor and the manipulation of some regular expressions.
+Since provident from the \textit{Project Gutenberg}, the books come with headers and annotations that identify authors, sources and additional metadata that 
+was not relevant for our study; with this in mind, we preprocessed the various book files to remove the metadata that could cause unwanted variation on results. 
+This process was quite simple and was only necessary the usage of a text editor and the manipulation of some regular expressions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Frequent Word Identification}\label{algs}
 
-Lorem ipsum ...
+Identifying the most frequent words in a text stream was achieved using two very different strategies.
+On the first one, the program keeps record of all words that appear in the information stream along with an exact count of each word - this allows it to 
+determine at any time which words are the most frequent.
+The second, on the other hand, is a far more memory-friendly solution that uses hash functions to avoid storing the pair $(word, counter)$.
+In this chapter we discuss the implementation of both solutions for the use case of identifying the most frequent words on literary works.
 
 \subsection{Exact Counter}
 
-Lorem ipsum ...
+The exact counter is the gold standard when creating alternative solutions that save time, memory or other resource at the cost of precision.
+It is by the values computed by it that the other counters are evaluated.
+
+Its implementation consists of a regular dictionary of words as keys and counts as values, constantly updated as new words appear on the text stream.
+There are conditions, however, to update this dictionary.
+The incoming word must contain at least two characters and cannot belong to a list of stop-words defined \textit{a priori}.
+This is done to prevent considering words that are irrelevant, i.e. do not offer any practical value to the study such as articles or prepositions.
+
+Stop-words are managed by an external library \cite{stop-words}, capable of dealing with all languages of our dataset. 
 
 \subsection{Count-Min Sketch}
 
-Lorem ipsum ...
+The Count–Min Sketch (CM Sketch) is a probabilistic data structure that serves as a frequency table of events in a data stream.
+This means it works essentially like Bloom-Filters (BFs).
+However, they are used differently and therefore sized differently: 
+a CM Sketch typically has less entries than the total number of different events (or words in our case) of the stream, related to the desired approximation 
+quality of the sketch, while a counting BF is usually sized to match the total number of different events. 
+
+The solution uses hash functions to map word occurrences to frequencies, but saves memory space at the expense of over-counting some words due to collisions.
+The effect of these phenomena is addressed ahead.
+\newline
+
+The implementation of our CM Sketch was taken from the resources made available by the course's professor.
+As it served perfectly for our purposes, we found it unreasonable to reach our own implementation at the risk of adding imperfections that could compromise our study.
+Nevertheless, we offer a simple description of how it works and how we introduced it to the use case of count words.
+
+If the same conditions defined in the Exact Counter are verified for the current word on the text stream, the word is passed to the \textit{update()} method of 
+the \texttt{CountMinSketch} class.
+This method then applies all its hash functions to the word and increments the values on the hash tables on the respective entries.
+
+As the word counts either have the exact count or suffer from over-counting, the value considered as more trustworthy is the one whose result from hashing and 
+updating returned the smallest value - the one with less occurrences of collisions - (hence the name count-MIN sketch).
+It is this value that is returned when the class instance is queried.
+
+\texttt{CountMinSketch} receives two regulatory parameters that allow us to control the overestimation factor.
+These are \texttt{m}, the size of the hash tables, and \texttt{d}, the number of hash tables.
+The first regulates how significant is the overestimation since only the smallest value is returned by \textit{query()} so the more tables there are, the 
+smallest will be the difference between the real count and the one returned.
+The second reduces the probability of collisions since more hash tables means more complex hashes less likely to be equal.
+Two alternative parameters could have been used, \texttt{delta} and \texttt{epsilon}, that regulate the probability of query error and the query error factor 
+and internally define \texttt{m} and \texttt{d} but in our case we sticked with the first two.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

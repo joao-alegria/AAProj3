@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.16)  28 DEC 2019 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.16)  28 DEC 2019 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -445,7 +445,7 @@ Package caption Info: End \AtBeginDocument code.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no £ in font cmr12!
 
-Underfull \hbox (badness 1270) in paragraph at lines 49--51
+Underfull \hbox (badness 1270) in paragraph at lines 55--57
 []\OT1/cmr/bx/it/9 Keywords \OT1/cmr/bx/n/9 -- Prob-a-bilis-tic Counter, Count-
 Min
  []
@@ -459,97 +459,109 @@ Missing character: There is no “ in font cmr10!
 
 
 ]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no “ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 116.
+               Default added (so using `tbp') on input line 177.
 
-<englishAlice100_5.png, id=28, 1387.584pt x 727.7589pt>
+<englishAlice100_5.png, id=25, 1387.584pt x 727.7589pt>
 File: englishAlice100_5.png Graphic file (type png)
 <use englishAlice100_5.png>
-Package pdftex.def Info: englishAlice100_5.png  used on input line 118.
+Package pdftex.def Info: englishAlice100_5.png  used on input line 179.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_5.png, id=30, 1387.584pt x 727.7589pt>
+<englishAlice1000_5.png, id=27, 1387.584pt x 727.7589pt>
 File: englishAlice1000_5.png Graphic file (type png)
 <use englishAlice1000_5.png>
-Package pdftex.def Info: englishAlice1000_5.png  used on input line 122.
+Package pdftex.def Info: englishAlice1000_5.png  used on input line 183.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice10000_5.png, id=31, 1387.584pt x 727.7589pt>
+<englishAlice10000_5.png, id=28, 1387.584pt x 727.7589pt>
 File: englishAlice10000_5.png Graphic file (type png)
 <use englishAlice10000_5.png>
-Package pdftex.def Info: englishAlice10000_5.png  used on input line 126.
+Package pdftex.def Info: englishAlice10000_5.png  used on input line 187.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_6.png, id=32, 1387.584pt x 727.7589pt>
+<englishAlice1000_6.png, id=29, 1387.584pt x 727.7589pt>
 File: englishAlice1000_6.png Graphic file (type png)
 <use englishAlice1000_6.png>
-Package pdftex.def Info: englishAlice1000_6.png  used on input line 130.
+Package pdftex.def Info: englishAlice1000_6.png  used on input line 191.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_8.png, id=33, 1387.584pt x 727.7589pt>
+<englishAlice1000_8.png, id=30, 1387.584pt x 727.7589pt>
 File: englishAlice1000_8.png Graphic file (type png)
 <use englishAlice1000_8.png>
-Package pdftex.def Info: englishAlice1000_8.png  used on input line 134.
+Package pdftex.def Info: englishAlice1000_8.png  used on input line 195.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_10.png, id=34, 1387.584pt x 727.7589pt>
+<englishAlice1000_10.png, id=31, 1387.584pt x 727.7589pt>
 File: englishAlice1000_10.png Graphic file (type png)
 <use englishAlice1000_10.png>
-Package pdftex.def Info: englishAlice1000_10.png  used on input line 138.
+Package pdftex.def Info: englishAlice1000_10.png  used on input line 199.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 117--141
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 178--202
 [][] []
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 117--141
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 178--202
 [] []
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 117--141
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 178--202
 [] [] 
  []
 
 (./report.bbl
 Missing character: There is no Ã in font cmr8!
-Missing character: There is no ­ in font cmr8!
+Missing character: There is no £ in font cmr8!
+ [2]
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no § in font cmr8!
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
- [2
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
+ [3
 
-] [3 <./englishAlice100_5.png> <./englishAlice1000_5.png> <./englishAlice10000_
-5.png> <./englishAlice1000_6.png> <./englishAlice1000_8.png> <./englishAlice100
-0_10.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
+ <./englishAlice100_5.png> <./englishAlice1000_5.png> <./englishAlice10000_5.pn
+g> <./englishAlice1000_6.png> <./englishAlice1000_8.png> <./englishAlice1000_10
+.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 183.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
- 8045 strings out of 494326
- 119985 string characters out of 6163849
- 222188 words of memory out of 5000000
- 11295 multiletter control sequences out of 15000+600000
+ 8051 strings out of 494326
+ 120032 string characters out of 6163849
+ 225197 words of memory out of 5000000
+ 11298 multiletter control sequences out of 15000+600000
  10971 words of font info for 40 fonts, out of 8000000 for 9000
  352 hyphenation exceptions out of 8191
- 36i,8n,39p,892b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,39p,892b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on report.pdf (3 pages, 369109 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on report.pdf (3 pages, 386160 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
