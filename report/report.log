@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.24)  28 DEC 2019 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.24)  28 DEC 2019 18:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -416,81 +416,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--174
 
  []
 
-[2] (/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.bbl) [3]
+[2]
+
+LaTeX Warning: Reference `fig:2' on page 3 undefined on input line 197.
+
+
+LaTeX Warning: Reference `fig:3' on page 3 undefined on input line 197.
+
+(/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.bbl) [3]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 237.
+               Default added (so using `tbp') on input line 255.
 
-<englishAlice100_5.png, id=55, 1387.584pt x 727.7589pt>
+<englishAlice100_5.png, id=59, 1387.584pt x 727.7589pt>
 File: englishAlice100_5.png Graphic file (type png)
 <use englishAlice100_5.png>
-Package pdftex.def Info: englishAlice100_5.png  used on input line 239.
+Package pdftex.def Info: englishAlice100_5.png  used on input line 257.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_5.png, id=57, 1387.584pt x 727.7589pt>
+<englishAlice1000_5.png, id=61, 1387.584pt x 727.7589pt>
 File: englishAlice1000_5.png Graphic file (type png)
 <use englishAlice1000_5.png>
-Package pdftex.def Info: englishAlice1000_5.png  used on input line 243.
+Package pdftex.def Info: englishAlice1000_5.png  used on input line 261.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice10000_5.png, id=58, 1387.584pt x 727.7589pt>
+<englishAlice10000_5.png, id=62, 1387.584pt x 727.7589pt>
 File: englishAlice10000_5.png Graphic file (type png)
 <use englishAlice10000_5.png>
-Package pdftex.def Info: englishAlice10000_5.png  used on input line 247.
+Package pdftex.def Info: englishAlice10000_5.png  used on input line 265.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_6.png, id=59, 1387.584pt x 727.7589pt>
+<englishAlice1000_6.png, id=63, 1387.584pt x 727.7589pt>
 File: englishAlice1000_6.png Graphic file (type png)
 <use englishAlice1000_6.png>
-Package pdftex.def Info: englishAlice1000_6.png  used on input line 251.
+Package pdftex.def Info: englishAlice1000_6.png  used on input line 269.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_8.png, id=60, 1387.584pt x 727.7589pt>
+<englishAlice1000_8.png, id=64, 1387.584pt x 727.7589pt>
 File: englishAlice1000_8.png Graphic file (type png)
 <use englishAlice1000_8.png>
-Package pdftex.def Info: englishAlice1000_8.png  used on input line 255.
+Package pdftex.def Info: englishAlice1000_8.png  used on input line 273.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
-<englishAlice1000_10.png, id=61, 1387.584pt x 727.7589pt>
+<englishAlice1000_10.png, id=65, 1387.584pt x 727.7589pt>
 File: englishAlice1000_10.png Graphic file (type png)
 <use englishAlice1000_10.png>
-Package pdftex.def Info: englishAlice1000_10.png  used on input line 259.
+Package pdftex.def Info: englishAlice1000_10.png  used on input line 277.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 238--262
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 256--280
 [][] []
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 238--262
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 256--280
 [] []
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 238--262
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 256--280
 [] [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
-[4
-
-] [5 </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice100_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice10000_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_6.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_8.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_10.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+[4] [5 </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice100_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice10000_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_6.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_8.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_10.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 265.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
  ) 
 Here is how much of TeX's memory you used:
- 8068 strings out of 492623
- 121110 string characters out of 6135669
- 235352 words of memory out of 5000000
- 11866 multiletter control sequences out of 15000+600000
+ 8071 strings out of 492623
+ 121131 string characters out of 6135669
+ 235403 words of memory out of 5000000
+ 11869 multiletter control sequences out of 15000+600000
  11279 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,8n,39p,367b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.pdf (5 pages, 397105 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.pdf (5 pages, 408285 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  23 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

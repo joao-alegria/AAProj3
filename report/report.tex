@@ -185,17 +185,19 @@ and \texttt{numHash} within the range [1,10].
 \newpage
 The exact count is considered to compute both the error of the approximate count and its relative error.
 The error ($E$) of an estimation for a word is defined as the difference between its exact count ($X$) in the text stream and the count given by the Sketch.
-The relative error ($E_r$) corresponds to error percentage given by equation \ref{eq:1}.
-
-
-
-
-
-
+The relative error ($E_r$) corresponds to the error percentage given by equation \ref{eq:1}.
 
 \section{Results \& Discussion} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Lorem ipsum ...
+The first analysis we did was on the words considered most frequent by CM Sketch and how accurate were its count estimations.
+This is possible to do by reading the bar charts present in figure \ref{fig:1}.
+These bar charts present the counts of both solutions in descending order of the top 20 words of the data stream; they allow to see which \texttt{CountMinSketch}
+configurations offer reasonably good results.
+
+Figures \ref{fig:2} and \ref{fig:3}, on the other hand, present two line charts that follow the evolution of the average error associated to the Sketch counts 
+according to the parameters \textit{numHash} and \textit{numColumns}, respectively.
+
+
 
 % \begin{table}[h!]
 % \centering
@@ -223,7 +225,23 @@ Lorem ipsum ...
 
 \section{Conclusion}
 
-Lorem ipsum ...
+Reducing memory usage while maintaining accuracy on determining the most frequent words on a text stream is not a trivial task.
+Hash functions offer a great benefit by allowing solutions to not have to store the words being counted, but they bring the problem of different words 
+returning the same hash, resulting in counting collisions.
+Managing this brings complexity to any solution that takes advantage of such memory saving strategy.
+
+Count-Min Sketch proved to be able to determine the most frequent words with a very high precision with much less memory usage than an exact counter.
+And, by studying the evolution of the algorithm's behavior for different configurations, we were able to achieve a balanced solution for the dataset available.
+
+For future work, we believe it would be a good idea to implement other algorithms such as the ones presented in chapter \ref{problem} so that a deeper analysis 
+and comparison between these solutions could be achieved.
+
+Our overall perspective on the project is very positive.
+We found that hash tables were very practical and adequate to problems such as this, and, even though we did not formally compare the performances of the 
+algorithm here presented and the ones from our previous works, we were still able to conclude that Count-Min Sketch is far more promising than the regular 
+approximate counters based on a given probability of updating counts.
+As we were both already introduced to the problem when the project began, we were able to properly segment the work to be done very rapidly and kept a good 
+balance and work distribution between group elements throughout the development.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -260,6 +278,7 @@ Lorem ipsum ...
         \caption{Lorem ipsum}
     \end{subfigure}
     \caption{Caption place holder}
+    \label{fig:1}
 \end{figure*}
 
 \end{document}

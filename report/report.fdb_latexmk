@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex report"] 1577553638 "report.aux" "report.bbl" "report" 1577553639
+["bibtex report"] 1577554042 "report.aux" "report.bbl" "report" 1577556219
   "./e-revdetua.bst" 1326997272 15574 ceba798f28629015b560671ac1781007 ""
-  "report.aux" 1577553639 2484 ee624936042ecc08f80c3b84c5c318f9 "pdflatex"
+  "report.aux" 1577556219 2622 4ddbf75ea15b2fd36edd659dfaa7f357 "pdflatex"
   "report.bib" 1577548674 592 2574ed3687776723d96d19a8299d8fa1 ""
   (generated)
   "report.blg"
   "report.bbl"
-["pdflatex"] 1577553638 "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.tex" "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.pdf" "report" 1577553639
-  "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux" 1577553639 2484 ee624936042ecc08f80c3b84c5c318f9 ""
-  "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.tex" 1577553637 14488 f115cf06d470e36f5a4912fbb63eb260 ""
+["pdflatex"] 1577556218 "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.tex" "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.pdf" "report" 1577556219
+  "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux" 1577556219 2622 4ddbf75ea15b2fd36edd659dfaa7f357 ""
+  "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.tex" 1577556218 16781 5d47197a3202220041cba0bc14f816b0 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1557554374 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1557554374 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1557554374 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -32,6 +32,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1557554374 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1557554374 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm" 1557554374 768 d7b9a2629a0c353102ad947dc9221d49 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1557554374 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1557554374 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1557554374 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1557554374 36554 b67dc2cfa451409e100b3fcf5f506509 ""
@@ -98,18 +99,18 @@
   "englishAlice100_5.png" 1577549482 32940 9cd94f565599bf2d8ebe2be8a472ae6a ""
   "enumitem.sty" 1561043420 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "float.sty" 1574004703 6749 16d2656a1984957e674b149555f1ea1d ""
-  "report.aux" 1577553639 2484 ee624936042ecc08f80c3b84c5c318f9 "pdflatex"
-  "report.bbl" 1577553638 579 574a99f6ad2f6485a7302b1afc6a3027 "bibtex report"
-  "report.out" 1577553639 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.tex" 1577553637 14488 f115cf06d470e36f5a4912fbb63eb260 ""
+  "report.aux" 1577556219 2622 4ddbf75ea15b2fd36edd659dfaa7f357 "pdflatex"
+  "report.bbl" 1577554042 579 574a99f6ad2f6485a7302b1afc6a3027 "bibtex report"
+  "report.out" 1577556218 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.tex" 1577556218 16781 5d47197a3202220041cba0bc14f816b0 ""
   "revdetua.cls" 1574115548 24168 92b30c451548a809795cdf4da2b06d7d ""
   "scicite.sty" 1574004734 21940 f3b9f4a675770828af17c69b198998fc ""
   "setspace.sty" 1577535002 22912 99726fb067fe04e8b69ba6939cbc91af ""
   "subcaption.sty" 1574004734 6122 bfe7acc131951843bf919759c3c339a6 ""
   (generated)
-  "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.log"
   "report.log"
-  "report.out"
-  "report.pdf"
   "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.pdf"
+  "report.pdf"
+  "report.out"
+  "/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.log"
   "report.aux"
