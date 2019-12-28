@@ -87,10 +87,10 @@ def findFrequentWords(filename, outputfile, numHash, numColumns):
 
         sketchMeanAbsEr = sum(sketchError)/len(sketchError)
 
-        sketchMeanRelEr = sketchMeanAbsEr/avgAll
+        sketchMeanRelEr = (sketchMeanAbsEr/avgAll)*100
 
         out.write("{},{},{},{},{}\n".format(key, round(avgAll), round(
-            avgSketch, 3), round(sketchMeanAbsEr, 3), round(sketchMeanRelEr, 3)))
+            avgSketch, 2), round(sketchMeanAbsEr, 2), round(sketchMeanRelEr, 2)))
     out.close()
 
 
