@@ -18,9 +18,7 @@
 
 \usepackage{booktabs}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{document}
+\begin{document} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 \Header{2}{85122}{Dezembro}{2019}{1}
 
@@ -38,9 +36,7 @@
     \normalsize{University of Aveiro}\\
 } 
 
-\maketitle
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
     Determining the most frequent items on a data stream has many applications and is a hot topic on the research community of the field.
@@ -56,9 +52,7 @@
     Probabilistic Counter, Count-Min Sketch, Memory-Efficient Algorithms
 \end{keywords}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Problem Contextualization}\label{problem}
+\section{Problem Contextualization}\label{problem} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 When dealing with large datasets there are many operations that require the calculation of properties of each element. 
 The presence of frequent events throughout the data might be a potential aspect worth exploring.
@@ -83,11 +77,9 @@ We create data streams to simulate a real world scenario and test the effectiven
 Other available alternatives were: Frequent-Count, proposed by Misra \& Gries; Lossy-Count, by Manku \& Motwani; Space-Saving-Count, by Metwally.
 We also discuss the differences and similarities between book translations.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dataset}\label{dataset} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Dataset}\label{dataset}
-
-The dataset used, as already mentioned in Section \ref{problem}, is based on literary works and in some of their translations. 
+The dataset used, as already mentioned in chapter \ref{problem}, is based on literary works and in some of their translations. 
 All of the books were obtained from \textit{Project Gutenberg}\cite{gutenberg}. 
 The chosen books and respective languages are presented below:
 
@@ -97,16 +89,14 @@ The chosen books and respective languages are presented below:
     \item \textit{A Christmas Carol}, by Charles Dickens - written in English, Finnish, German, Dutch and French
     \item \textit{King Solomon's Mines}, by H. Rider Haggard - written in English, Finnish and Portuguese
     \item \textit{Oliver Twist}, by Charles Dickens - written in English, French and German
-    \item \textit{The Adventures of Tom Sawyer}, by Mark Twain - written in English, Finnish, German and Catalan
+    \item \textit{The Adventures of Tom Sawyer}, by Mark Twain - written in English, Finnish, German and Catalan 
 \end{itemize}
 
 Since provident from the \textit{Project Gutenberg}, the books come with headers and annotations that identify authors, sources and additional metadata that 
 was not relevant for our study; with this in mind, we preprocessed the various book files to remove the metadata that could cause unwanted variation on results. 
-This process was quite simple and was only necessary the usage of a text editor and the manipulation of some regular expressions.
+This process was quite simple and was only necessary the usage of a text editor and the manipulation of some regular expressions. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Frequent Word Identification}\label{algs}
+\section{Frequent Word Identification}\label{algs} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Identifying the most frequent words in a text stream was achieved using two very different strategies.
 On the first one, the program keeps record of all words that appear in the information stream along with an exact count of each word - this allows it to 
@@ -132,7 +122,7 @@ The Count–Min Sketch (CM Sketch) is a probabilistic data structure that serves
 This means it works essentially like Bloom-Filters (BFs).
 However, they are used differently and therefore sized differently: 
 a CM Sketch typically has less entries than the total number of different events (or words in our case) of the stream, related to the desired approximation 
-quality of the sketch, while a counting BF is usually sized to match the total number of different events. 
+quality, while a counting BF is sized to match the total number of different events. 
 
 The solution uses hash functions to map word occurrences to frequencies, but saves memory space at the expense of over-counting some words due to collisions.
 The effect of these phenomena is addressed ahead.
@@ -140,7 +130,7 @@ The effect of these phenomena is addressed ahead.
 
 The implementation of our CM Sketch was taken from the resources made available by the course's professor.
 As it served perfectly for our purposes, we found it unreasonable to reach our own implementation at the risk of adding imperfections that could compromise our study.
-Nevertheless, we offer a simple description of how it works and how we introduced it to the use case of count words.
+Nevertheless, we offer a description of how it works and how we introduced it to the use case.
 
 If the same conditions defined in the Exact Counter are verified for the current word on the text stream, the word is passed to the \textit{update()} method of 
 the \texttt{CountMinSketch} class.
@@ -158,52 +148,52 @@ The second reduces the probability of collisions since more hash tables means mo
 Two alternative parameters could have been used, \texttt{delta} and \texttt{epsilon}, that regulate the probability of query error and the query error factor 
 and internally define \texttt{m} and \texttt{d} but in our case we sticked with the first two.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Literary Study} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Literary Study}
+As a form of automation and to enable us to quickly study the behavior of the chosen algorithm, we created a script in Python that allows us to change some of 
+the necessary parameters and run the solution for a given input stream in a straightforward, command-based manner.
+The signature of our script is as follows:
 
-As a form of automation and to enable us to quickly study the behavior of the chosen algorithm when changing some of the necessary parameters for the correct functioning of the program we decided to create a script in Python3 that resolved all our problems. The signature of that script is as follows:
-
+\vspace{-5pt}
 \begin{center}
     \begin{verbatim}
-    python3 frequentWordFinder.py [-h] 
+    python3 frequentWordFinder.py [-h]
     [-o outputFolder] [-d numHash] 
     [-m numColumns] <inputFolder>
     \end{verbatim}
 \end{center}
+\vspace{-15pt}
 
-Where the \textit{outputFolder} is a optional parameter that indicates the folder where the resulting files should be stored, the \textit{numHash} is also an optional parameter and is the number of hashes the user wants for the script to use when creating the \texttt{CountMinSketch} object; \textit{numColumns} is also optional and is the number of columns used also when creating the \texttt{CountMinSketch} object, which as already explained in \ref{algs}, is the space allocated to when storing the hashing results, and the bigger the better since that will cause less conflicts. Lastly the input folder is a mandatory parameters since it's the folder where the source data should be present; this data should be already preprocessed, since that will generate the best results, without any noise form the headers and annotations mentioned in \ref{dataset}.
+The \textit{outputFolder} is a parameter that indicates the folder where the resulting files should be stored (the default folder is called "out" and is 
+generated if it does not exist), \textit{numHash} and \textit{numColumns} correspond to the number of hashes and the number of columns the user wants to be used 
+when creating the \texttt{CountMinSketch}, explained in chapter\ref{algs}; these 3 parameters are optional and they all have default values 
+(outputFolder:"out", numHash:1000, numColumns:5).
+The \textit{inputFolder} is a mandatory parameter since it's the folder where the source data should be present; this data is assumed to be preprocessed, 
+since that will generate the best results, without any noise form the headers and annotations mentioned in chapter \ref{dataset}.
+\newline
 
-\begin{figure*}[]
-    \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice100_5.png}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice1000_5.png}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice10000_5.png}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice1000_6.png}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice1000_8.png}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice1000_10.png}
-        \caption{Lorem ipsum}
-    \end{subfigure}
-    \caption{Caption place holder}
-\end{figure*}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+What we did to study the performance of CM Sketch was to record its results for various inputs and parameter combinations and resort to data visualization tools 
+to understand its behavior.
+The tested inputs were all of the literary works from our dataset, and the tested parameters were combinations of \texttt{numColumns} within the range [200,4000] 
+and \texttt{numHash} within the range [1,10].
 
-\section{Results \& Discussion}
+\begin{equation}
+    E_{r} = \frac{E}{X} \times 100
+    \label{eq:1}
+\end{equation}
+
+\newpage
+The exact count is considered to compute both the error of the approximate count and its relative error.
+The error ($E$) of an estimation for a word is defined as the difference between its exact count ($X$) in the text stream and the count given by the Sketch.
+The relative error ($E_r$) corresponds to error percentage given by equation \ref{eq:1}.
+
+
+
+
+
+
+
+\section{Results \& Discussion} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Lorem ipsum ...
 
@@ -239,6 +229,37 @@ Lorem ipsum ...
 
 \bibliography{report.bib} 
 
-%\section*{Appendix}
+\newpage
+\textbf{ }
+\newpage
+\appendix
+
+\begin{figure*}[]
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice100_5.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_5.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice10000_5.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_6.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_8.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice1000_10.png}
+        \caption{Lorem ipsum}
+    \end{subfigure}
+    \caption{Caption place holder}
+\end{figure*}
 
 \end{document}
