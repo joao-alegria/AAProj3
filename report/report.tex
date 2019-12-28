@@ -54,9 +54,8 @@
 
 \section{Problem Contextualization}
 
-This report was written for the course of 'Advanced Algorithms', taught by 
-professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA.
-It describes the work done for the third assignment of the course \cite{trab3}.
+This report was written for the course of 'Advanced Algorithms', taught by professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA.
+It describes the work done for the third assignment of the course \cite{trab3}. 
 The chosen hypothesis was "Hipótese A-2 – Contagem dos Itens Mais Frequentes".
 
 Lorem ipsum ...
@@ -82,19 +81,62 @@ Lorem ipsum ...
 
 \section{Frequent Word Identification}
 
-Lorem ipsum ...
+Identifying the most frequent words in a text stream was achieved using two very different strategies.
+On the first one, the program keeps record of all words that appear in the information stream along with an exact count of each word - this allows it to 
+determine at any time which words are the most frequent.
+The second, on the other hand, is a far more memory-friendly solution that uses hash functions to avoid storing the pair $(word, counter)$.
+In this chapter we discuss the implementation of both solutions for the use case of identifying the most frequent words on literary works.
 
 \subsection{Exact Counter}
 
-Lorem ipsum ...
+The exact counter is the gold standard when creating alternative solutions that save time, memory or other resource at the cost of precision.
+It is by the values computed by it that the other counters are evaluated.
+
+Its implementation consists of a regular dictionary of words as keys and counts as values, constantly updated as new words appear on the text stream.
+There are conditions, however, to update this dictionary.
+The incoming word must contain at least two characters and cannot belong to a list of stop-words defined \textit{a priori}.
+This is done to prevent considering words that are irrelevant, i.e. do not offer any practical value to the study such as articles or prepositions.
+
+Stop-words are managed by an external library \cite{stop-words}, capable of dealing with all languages of our dataset.
 
 \subsection{Count-Min Sketch}
 
-Lorem ipsum ...
+The Count–Min Sketch (CM Sketch) is a probabilistic data structure that serves as a frequency table of events in a data stream.
+This means it works essentially like Bloom-Filters (BFs).
+However, they are used differently and therefore sized differently: 
+a CM Sketch typically has less entries than the total number of different events (or words in our case) of the stream, related to the desired approximation 
+quality of the sketch, while a counting BF is usually sized to match the total number of different events. 
+
+The solution uses hash functions to map word occurrences to frequencies, but saves memory space at the expense of over-counting some words due to collisions.
+The effect of these phenomena is addressed ahead.
+\newline
+
+The implementation of our CM Sketch was taken from the resources made available by the course's professor.
+As it served perfectly for our purposes, we found it unreasonable to reach our own implementation at the risk of adding imperfections that could compromise our study.
+Nevertheless, we offer a simple description of how it works and how we introduced it to the use case of count words.
+
+If the same conditions defined in the Exact Counter are verified for the current word on the text stream, the word is passed to the \textit{update()} method of 
+the \texttt{CountMinSketch} class.
+This method then applies all its hash functions to the word and increments the values on the hash tables on the respective entries.
+
+As the word counts either have the exact count or suffer from over-counting, the value considered as more trustworthy is the one whose result from hashing and 
+updating returned the smallest value - the one with less occurrences of collisions - (hence the name count-MIN sketch).
+It is this value that is returned when the class instance is queried.
+
+\texttt{CountMinSketch} receives two regulatory parameters that allow us to control the overestimation factor.
+These are \texttt{m}, the size of the hash tables, and \texttt{d}, the number of hash tables.
+The first regulates how significant is the overestimation since only the smallest value is returned by \textit{query()} so the more tables there are, the 
+smallest will be the difference between the real count and the one returned.
+The second reduces the probability of collisions since more hash tables means more complex hashes less likely to be equal.
+Two alternative parameters could have been used, \texttt{delta} and \texttt{epsilon}, that regulate the probability of query error and the query error factor 
+and internally define \texttt{m} and \texttt{d} but in our case we sticked with the first two.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Literary Study}
+
+The fist step taken when identifying the most frequent words on a text corpus is detecting the language of the text.
+This is common to both solutions and done even before they are executed, as it is later used to distinguish translations.
 
 Lorem ipsum ...
 

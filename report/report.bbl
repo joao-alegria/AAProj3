@@ -6,4 +6,9 @@ Joaquim Madeira,
 \newblock
   \url{https://elearning.ua.pt/pluginfile.php/1514391/mod_resource/content/0/AA_1920_Trab_2.pdf}.
 
+\bibitem{stop-words}
+Python~SW Foundation,
+\newblock ``Pypi - stop-words'',
+\newblock \url{https://pypi.org/project/stop-words/}.
+
 \end{thebibliography}
