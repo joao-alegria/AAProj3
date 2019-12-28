@@ -17,6 +17,7 @@
 \usepackage{verbatim}
 
 \usepackage{booktabs}
+\usepackage[utf8]{inputenc}
 
 \begin{document} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
@@ -197,27 +198,52 @@ The relative error ($E_r$) corresponds to error percentage given by equation \re
 
 Lorem ipsum ...
 
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{@{}c|ccc@{}}
-% \toprule
-%                       & \textbf{EC} & \textbf{ACFP} & \textbf{ACLP} \\ \midrule
-% \textbf{All Words}    & 5116614     & 4886294       & 4797502 \\
-% \textbf{Top 10 Words} & 40899       & 22916         & 6635    \\ \bottomrule
-% \end{tabular}
-% \caption{Number of bytes used in the counter values.}
-% \end{table}
-% \vspace{-12pt}
 
-% \vspace{-10pt}
-% \captionsetup[figure]{labelformat=empty}
-% \begin{figure}[H]
-%     \centering
-%     \setlength{\belowcaptionskip}{-12pt}
-%     \includegraphics[width=\linewidth]{wordCount_ACC_DU.png}
-%     \caption{Fig. 1: Counter estimations for the top 10 words.} 
-%     \label{fig:1}
-% \end{figure}
+\begin{figure}[h]
+    \centering
+    \setlength{\belowcaptionskip}{-12pt}
+    \includegraphics[width=\linewidth]{englishAliceColumnStudy200_4000.png}
+    \caption{Column Study with English Alice.} 
+    \label{fig:columnStudy}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \setlength{\belowcaptionskip}{-12pt}
+    \includegraphics[width=\linewidth]{englishAliceHashesStudy1_10.png}
+    \caption{Hashes Study with English Alice.} 
+    \label{fig:hashStudy}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Key     & All & Sketch & SktAvgAbsEr & SktAvgRelEr \\ \hline
+    said    & 462 & 462    & 0           & 0           \\ \hline
+    alice   & 397 & 397    & 0           & 0           \\ \hline
+    little  & 128 & 128    & 0           & 0           \\ \hline
+    one     & 104 & 104    & 0           & 0           \\ \hline
+    know    & 87  & 90     & 3           & 3.45        \\ \hline
+    like    & 85  & 85     & 0           & 0           \\ \hline
+    went    & 83  & 83     & 0           & 0           \\ \hline
+    queen   & 75  & 75     & 0           & 0           \\ \hline
+    thought & 74  & 76     & 2           & 2.7         \\ \hline
+    time    & 71  & 71     & 0           & 0           \\ \hline
+    see     & 67  & 67     & 0           & 0           \\ \hline
+    well    & 63  & 64     & 1           & 1.59        \\ \hline
+    can     & 63  & 63     & 0           & 0           \\ \hline
+    king    & 63  & 63     & 0           & 0           \\ \hline
+    don     & 61  & 61     & 0           & 0           \\ \hline
+    now     & 60  & 60     & 0           & 0           \\ \hline
+    turtle  & 59  & 59     & 0           & 0           \\ \hline
+    began   & 58  & 59     & 1           & 1.72        \\ \hline
+    ll      & 57  & 57     & 0           & 0           \\ \hline
+    way     & 56  & 56     & 0           & 0           \\ \hline
+    \end{tabular}
+    \caption{English Alice Results(2000 cols,5 hash)}
+    \label{tab:alice2000_5}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -229,37 +255,50 @@ Lorem ipsum ...
 
 \bibliography{report.bib} 
 
-\newpage
-\textbf{ }
-\newpage
+\clearpage
 \appendix
 
-\begin{figure*}[]
+\begin{figure}[ht]
+    \onecolumn
     \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice100_5.png}
-        \caption{Lorem ipsum}
+        \includegraphics[height=1.6in]{englishAlice200_5.png}
+        \caption{200 columns, 5 hashes} 
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice600_5.png}
+        \caption{600 columns, 5 hashes}
     \end{subfigure}
     \begin{subfigure}[t]{0.5\textwidth}
         \includegraphics[height=1.6in]{englishAlice1000_5.png}
-        \caption{Lorem ipsum}
+        \caption{1000 columns, 5 hashes}
     \end{subfigure}
     \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice10000_5.png}
-        \caption{Lorem ipsum}
+        \includegraphics[height=1.6in]{englishAlice4000_5.png}
+        \caption{4000 columns, 5 hashes}
+    \end{subfigure}
+    \caption{Column Study Comparison}
+    \label{fig:columnSketchComp}
+\end{figure}
+\begin{figure}[ht]
+    \onecolumn
+    \begin{subfigure}[t]{0.5\textwidth}
+        \includegraphics[height=1.6in]{englishAlice600_2.png}
+        \caption{600 columns, 2 hashes} 
     \end{subfigure}
     \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice1000_6.png}
-        \caption{Lorem ipsum}
+        \includegraphics[height=1.6in]{englishAlice600_4.png}
+        \caption{600 columns, 4 hashes}
     \end{subfigure}
     \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice1000_8.png}
-        \caption{Lorem ipsum}
+        \includegraphics[height=1.6in]{englishAlice600_6.png}
+        \caption{600 columns, 6 hashes}
     \end{subfigure}
     \begin{subfigure}[t]{0.5\textwidth}
-        \includegraphics[height=1.6in]{englishAlice1000_10.png}
-        \caption{Lorem ipsum}
+        \includegraphics[height=1.6in]{englishAlice600_10.png}
+        \caption{600 columns, 10 hashes}
     \end{subfigure}
-    \caption{Caption place holder}
-\end{figure*}
+    \caption{Hash Study Comparison}
+    \label{fig:hashSketchComp}
+\end{figure}
 
 \end{document}
