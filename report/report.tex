@@ -52,20 +52,25 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Problem Contextualization}
+\section{Problem Contextualization}\label{problem}
 
 This report was written for the course of 'Advanced Algorithms', taught by 
 professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA.
 It describes the work done for the third assignment of the course \cite{trab3}.
 The chosen hypothesis was "Hipótese A-2 – Contagem dos Itens Mais Frequentes".
 
-Lorem ipsum ...
+One of the subjects studied in this course was the counting problems and the obstacles that appear when dealing with this type of problems in very large contexts. The difficulties appear even more when the contexts morph into the newest, fastest and the form that delivers the most amount of information, the data streams. Being a continuous source of real time events, processing the events that happen in a precise and reliable way can be more ofter than not very challenging and sometimes impossible. Many solutions appear in hopes of creating reliable approximations that without using the as many resources still permit inferring the same conclusions. This solutions use many times probabilistic approaches or some kind of mapping that allows some form of overlapping of the data without compromising the results, such as hashing. 
+
+This theme was already a subject for previous works, but since it is an area so vast and with so many different approaches, each one with its advantages and disadvantages, the professor decided to list it again for the possible report themes in this last project, but this time with more complex and refined algorithms that use memory and resources in a more intelligent way. We ended up choosing this theme since we are interested in knowing how lower can the resource usage go without compromising the outcome of the model, meaning that the conclusions taken from the approximations made by the model are not too distant from the ones taken from the exact counters.
+
+In the context of literary works as source of text, we create data streams to simulate a real world scenario and test the effectiveness and performance of one of the proposed algorithms. Some of those proposed algorithms were the one from Misra \& Gries(Frequent-Count), the one from Manku \& Motwani(SLossy-Count), the one from Metwally(Space-Saving-Count) and lastly the Count-Min Sketch. We choose to analyze the last one, algorithm that will be further described in Section \ref{algs}.
+As a extra task, because the dataset are books, if using their translations, we can also discuss if the most common words in one language are the as the ones found in another, which we can expect to be similar since the story is the same.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Dataset}
 
-Lorem ipsum ...
+The dataset used, as already mentioned in Section \ref{problem}, is based on literary works and in some of their translations. All of the books were obtained from \textit{Project Gutenberg}\cite{gutenberg}. The chosen books and respective idioms are presented below:
 
 \setlist{nolistsep}
 \begin{itemize}
@@ -76,11 +81,11 @@ Lorem ipsum ...
     \item \textit{The Adventures of Tom Sawyer}, by Mark Twain - written in English, Finnish, German and Catalan
 \end{itemize}
 
-Lorem ipsum ...
+Since provident from the \textit{Project Gutenberg}, the books are provided with some headers and annotations that identify the author, the source and some additional metadata that was not relevant for our study; for that reason we proceeded to execute a quick preprocessing over the various book files to remove that metadata that could cause unwanted variation of results. This process was quite simple and was only necessary the usage of a text editor and the manipulation of some regular expressions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Frequent Word Identification}
+\section{Frequent Word Identification}\label{algs}
 
 Lorem ipsum ...
 
