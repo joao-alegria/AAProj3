@@ -43,7 +43,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-    Lorem ipsum ...
+    Determining the most frequent items on a data stream has many applications and is a hot topic on the research community of the field.
+    The challenges inherent of data stream processing in a memory efficient way are very much worth exploring and some of the existing solutions already provide
+    with great optimization strategies.
+
+    In this report, we focus on one of the most famous approximate counters to determine an estimation of the most frequent words of literary works from several 
+    authors in several languages and compare it to an exact counter.
+    We also present a few conclusions drawn from the study applied to the dataset.
 \end{abstract}
 
 \begin{keywords}
@@ -52,19 +58,38 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Problem Contextualization}
+\section{Problem Contextualization}\label{problem}
 
-This report was written for the course of 'Advanced Algorithms', taught by professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA.
-It describes the work done for the third assignment of the course \cite{trab3}. 
-The chosen hypothesis was "Hipótese A-2 – Contagem dos Itens Mais Frequentes".
+When dealing with large datasets there are many operations that require the calculation of properties of each element. 
+The presence of frequent events throughout the data might be a potential aspect worth exploring.
+However, counting problems present obstacles when dealt with in very large contexts, and the difficulties are undoubtedly accentuated when the contexts morph 
+into data streams.
+As continuous sources of real time events, data streams present big challenges when processing each event in a precise and reliable way.
+Many solutions have appeared throughout the years as means of dealing with these challenges by creating reliable approximations that, without using too many 
+resources, still permit inferring the same conclusions that one is in search of.
+These solutions are typically based on probabilistic approaches that do not compromise the results but add an error factor. 
 
-Lorem ipsum ...
+The previous works of both authors of this paper address the application of approximate counters with fixed or descending probabilities of updating counts on 
+the context of word counting in literary works \cite{alegria} \cite{filipe}.
+This time, the same literary works will be used to estimate the most frequent words, with the text corpus considered as data streams with the help of a different 
+and more complex strategy to reduce resource usage.
+This report was written for the course of 'Advanced Algorithms', taught by professor Joaquim Madeira for the master's in Informatics Engineering at DETI UA and 
+it describes the work done for the course's 3rd assignment \cite{trab3}. 
+We chose the hypothesis "Hipótese A-2 – Contagem dos Itens Mais Frequentes" as we were interested in knowing how low could memory usage go without compromising
+the outcome, i.e. how much memory could be saved while ensuring that the code still accomplished its purpose and returned approximations not too distant from 
+the exact counters' values.
+
+We create data streams to simulate a real world scenario and test the effectiveness and performance of the algorithm Count-Min Sketch.
+Other available alternatives were: Frequent-Count, proposed by Misra \& Gries; Lossy-Count, by Manku \& Motwani; Space-Saving-Count, by Metwally.
+We also discuss the differences and similarities between book translations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Dataset}
 
-Lorem ipsum ...
+The dataset used, as already mentioned in Section \ref{problem}, is based on literary works and in some of their translations. 
+All of the books were obtained from \textit{Project Gutenberg}\cite{gutenberg}. 
+The chosen books and respective languages are presented below:
 
 \setlist{nolistsep}
 \begin{itemize}
@@ -75,11 +100,13 @@ Lorem ipsum ...
     \item \textit{The Adventures of Tom Sawyer}, by Mark Twain - written in English, Finnish, German and Catalan
 \end{itemize}
 
-Lorem ipsum ...
+Since provident from the \textit{Project Gutenberg}, the books come with headers and annotations that identify authors, sources and additional metadata that 
+was not relevant for our study; with this in mind, we preprocessed the various book files to remove the metadata that could cause unwanted variation on results. 
+This process was quite simple and was only necessary the usage of a text editor and the manipulation of some regular expressions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Frequent Word Identification}
+\section{Frequent Word Identification}\label{algs}
 
 Identifying the most frequent words in a text stream was achieved using two very different strategies.
 On the first one, the program keeps record of all words that appear in the information stream along with an exact count of each word - this allows it to 
@@ -97,7 +124,7 @@ There are conditions, however, to update this dictionary.
 The incoming word must contain at least two characters and cannot belong to a list of stop-words defined \textit{a priori}.
 This is done to prevent considering words that are irrelevant, i.e. do not offer any practical value to the study such as articles or prepositions.
 
-Stop-words are managed by an external library \cite{stop-words}, capable of dealing with all languages of our dataset.
+Stop-words are managed by an external library \cite{stop-words}, capable of dealing with all languages of our dataset. 
 
 \subsection{Count-Min Sketch}
 
