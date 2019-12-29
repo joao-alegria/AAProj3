@@ -127,7 +127,6 @@ quality, while a counting BF is sized to match the total number of different eve
 
 The solution uses hash functions to map word occurrences to frequencies, but saves memory space at the expense of over-counting some words due to collisions.
 The effect of these phenomena is addressed ahead.
-\newline
 
 The implementation of our CM Sketch was taken from the resources made available by the course's professor.
 As it served perfectly for our purposes, we found it unreasonable to reach our own implementation at the risk of adding imperfections that could compromise our study.
@@ -149,7 +148,9 @@ The second reduces the probability of collisions since more hash tables means mo
 Two alternative parameters could have been used, \texttt{delta} and \texttt{epsilon}, that regulate the probability of query error and the query error factor 
 and internally define \texttt{m} and \texttt{d} but in our case we sticked with the first two.
 
-The hash functions used ............................................
+In relations to the hash functions used, they have the same basis and over that a differencing operation is perform to achieve as many hash functions asked from the user. The Python library \texttt{hashlib} \cite{hashlib} is used to generate secure hashes and digests, being the most used features its MD5 function and a hexadecimal digest. The dataflow of the hashing process goes as follows: firstly a base is created by generating a MD5 digest over the hash of the provided string; then for each one of the hash functions needed, the MD5 digest is updated with the successive indicators of the hash functions(from 0 to N) until the wanted function is reached, then the hexadecimal digest is created, converted to an integer and applied the modulus based on the size of the hash tables.
+
+In this process the successive addition of the hash function indicators is the portion that enables the creation of several hash function, since by starting from a base hash and adding always the same N numbers, it is equivalent of having N different hash function. The portion of code that calculates the hexadecimal digest and executes the modulus based on the size of the hash tables is the code that certifies that a valid index is always generated, since assuming that the hash tables have a size of K, the modulus of any number by K will return only values in the range [0, K-1]. 
 
 \section{Literary Study} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -185,7 +186,6 @@ and \texttt{numHash} within the range [1,10].
     \label{eq:1}
 \end{equation}
 
-\newpage
 The exact count is considered to compute both the error of the approximate count and its relative error.
 The error ($E$) of an estimation for a word is defined as the difference between its exact count ($X$) in the text stream and the count given by the Sketch.
 The relative error ($E_r$) corresponds to the error percentage given by equation \ref{eq:1}.
