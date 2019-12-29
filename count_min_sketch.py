@@ -51,19 +51,23 @@ class CountMinSketch(object):
             self.m = math.ceil(2.0 / epsilon)
             self.d = math.ceil(math.log(1.0 / delta))
         else:
-            raise ValueError( "You must either supply both m and d or delta and epsilon.")
+            raise ValueError(
+                "You must either supply both m and d or delta and epsilon.")
 
-        print("CM Sketch with " + str(self.m) + " columns and " + str(self.d) + " rows")
+        print("CM Sketch with " + str(self.m) +
+              " columns and " + str(self.d) + " rows")
 
         self.n = 0
 
         self.tables = []
         for _ in range(self.d):
-            table = array.array("l", (0 for _ in range(self.m)))   # signed long integers
+            # signed long integers
+            table = array.array("l", (0 for _ in range(self.m)))
             self.tables.append(table)
 
     def _hash(self, x):
-        md5 = hashlib.md5(str(hash(x)).encode("utf-8"))     # handle bytes, not strings
+        # handle bytes, not strings
+        md5 = hashlib.md5(str(hash(x)).encode("utf-8"))
         for i in range(self.d):
             md5.update(str(i).encode("utf-8"))              # concatenate
             yield int(md5.hexdigest(), 16) % self.m

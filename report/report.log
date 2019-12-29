@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.24)  28 DEC 2019 18:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.24)  28 DEC 2019 18:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -439,90 +439,89 @@ Overfull \hbox (21.37036pt too wide) in paragraph at lines 259--283
 <englishAlice200_5.png, id=71, 1387.584pt x 727.7589pt>
 File: englishAlice200_5.png Graphic file (type png)
 <use englishAlice200_5.png>
-Package pdftex.def Info: englishAlice200_5.png  used on input line 290.
+Package pdftex.def Info: englishAlice200_5.png  used on input line 350.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 <englishAlice600_5.png, id=72, 1387.584pt x 727.7589pt>
 File: englishAlice600_5.png Graphic file (type png)
 <use englishAlice600_5.png>
-Package pdftex.def Info: englishAlice600_5.png  used on input line 294.
+Package pdftex.def Info: englishAlice600_5.png  used on input line 354.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 <englishAlice1000_5.png, id=73, 1387.584pt x 727.7589pt>
 File: englishAlice1000_5.png Graphic file (type png)
 <use englishAlice1000_5.png>
-Package pdftex.def Info: englishAlice1000_5.png  used on input line 298.
+Package pdftex.def Info: englishAlice1000_5.png  used on input line 358.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 <englishAlice4000_5.png, id=74, 1387.584pt x 727.7589pt>
 File: englishAlice4000_5.png Graphic file (type png)
 <use englishAlice4000_5.png>
-Package pdftex.def Info: englishAlice4000_5.png  used on input line 302.
+Package pdftex.def Info: englishAlice4000_5.png  used on input line 362.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 289--305
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 349--365
 [][] []
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 289--305
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 349--365
 [] [] 
  []
 
 <englishAlice600_2.png, id=75, 1387.584pt x 727.7589pt>
 File: englishAlice600_2.png Graphic file (type png)
 <use englishAlice600_2.png>
-Package pdftex.def Info: englishAlice600_2.png  used on input line 311.
+Package pdftex.def Info: englishAlice600_2.png  used on input line 371.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 <englishAlice600_4.png, id=76, 1387.584pt x 727.7589pt>
 File: englishAlice600_4.png Graphic file (type png)
 <use englishAlice600_4.png>
-Package pdftex.def Info: englishAlice600_4.png  used on input line 315.
+Package pdftex.def Info: englishAlice600_4.png  used on input line 375.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 <englishAlice600_6.png, id=77, 1387.584pt x 727.7589pt>
 File: englishAlice600_6.png Graphic file (type png)
 <use englishAlice600_6.png>
-Package pdftex.def Info: englishAlice600_6.png  used on input line 319.
+Package pdftex.def Info: englishAlice600_6.png  used on input line 379.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 <englishAlice600_10.png, id=78, 1387.584pt x 727.7589pt>
 File: englishAlice600_10.png Graphic file (type png)
 <use englishAlice600_10.png>
-Package pdftex.def Info: englishAlice600_10.png  used on input line 323.
+Package pdftex.def Info: englishAlice600_10.png  used on input line 383.
 (pdftex.def)             Requested size: 220.47235pt x 115.63243pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 310--326
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 370--386
 [][] []
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 310--326
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 370--386
 [] [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
-[4
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
+[4] [5
 
- </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice200_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice4000_5.png>] [5
 
- </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_2.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_4.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_6.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_10.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+ </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice200_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice1000_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice4000_5.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_2.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_4.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_6.png> </home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/englishAlice600_10.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 390.
  (/home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 390.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 390.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 390.
  ) 
 Here is how much of TeX's memory you used:
- 8114 strings out of 492623
- 122188 string characters out of 6135669
- 238156 words of memory out of 5000000
- 11902 multiletter control sequences out of 15000+600000
+ 8117 strings out of 492623
+ 122236 string characters out of 6135669
+ 246156 words of memory out of 5000000
+ 11904 multiletter control sequences out of 15000+600000
  10971 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,39p,384b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,9n,39p,384b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.pdf (5 pages, 542587 bytes).
+Output written on /home/fp/Desktop/4A1S/AA/P/proj3/AAProj3/report/report.pdf (5 pages, 544498 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
