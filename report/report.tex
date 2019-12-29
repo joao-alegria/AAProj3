@@ -222,38 +222,6 @@ Here, CM Sketch was instantiated with a hash table of 2000 columns and 5 hash fu
     \label{fig:hashStudy}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \newpage
-% \textbf{ }
-% \newpage
-\section{Conclusion}
-
-Reducing memory usage while maintaining accuracy on determining the most frequent words on a text stream is not a trivial task.
-Hash functions offer a great benefit by allowing solutions to not have to store the words being counted, but they bring the problem of different words 
-returning the same hash, resulting in counting collisions.
-Managing this brings complexity to any solution that takes advantage of such memory saving strategy.
-
-Count-Min Sketch proved to be able to determine the most frequent words with a very high precision with much less memory usage than an exact counter.
-And, by studying the evolution of the algorithm's behavior for different configurations, we were able to achieve a balanced solution for the dataset available.
-
-For future work, we believe it would be a good idea to implement other algorithms such as the ones presented in chapter \ref{problem} so that a deeper analysis 
-and comparison between these solutions could be achieved.
-
-Our overall perspective on the project is very positive.
-We found that hash tables were very practical and adequate to problems such as this, and, even though we did not formally compare the performances of the 
-algorithm here presented and the ones from our previous works, we were still able to conclude that Count-Min Sketch is far more promising than the regular 
-approximate counters based on a given probability of updating counts.
-As we were both already introduced to the problem when the project began, we were able to properly segment the work to be done very rapidly and kept a good 
-balance and work distribution between group elements throughout the development.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\bibliography{report.bib} 
-
-\newpage
-\appendix
-
 \begin{table}[h]
     \centering
     \begin{tabular}{|l|l|l|l|l|}
@@ -343,6 +311,42 @@ balance and work distribution between group elements throughout the development.
     \end{subtable} 
     \caption{Sketch Comparison}
 \end{table}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\textbf{ }
+\newpage
+\section{Conclusion}
+
+Reducing memory usage while maintaining accuracy on determining the most frequent words on a text stream is not a trivial task.
+Hash functions offer a great benefit by allowing solutions to not have to store the words being counted, but they bring the problem of different words 
+returning the same hash, resulting in counting collisions.
+Managing this brings complexity to any solution that takes advantage of such memory saving strategy.
+
+Count-Min Sketch proved to be able to determine the most frequent words with a very high precision with much less memory usage than an exact counter.
+And, by studying the evolution of the algorithm's behavior for different configurations, we were able to achieve a balanced solution for the dataset available.
+
+For future work, we believe it would be a good idea to implement other algorithms such as the ones presented in chapter \ref{problem} so that a deeper analysis 
+and comparison between these solutions could be achieved.
+
+Our overall perspective on the project is very positive.
+We found that hash tables were very practical and adequate to problems such as this, and, even though we did not formally compare the performances of the 
+algorithm here presented and the ones from our previous works, we were still able to conclude that Count-Min Sketch is far more promising than the regular 
+approximate counters based on a given probability of updating counts.
+As we were both already introduced to the problem when the project began, we were able to properly segment the work to be done very rapidly and kept a good 
+balance and work distribution between group elements throughout the development.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{report.bib} 
+
+\clearpage
+\appendix
+
+
+
+
 
 \begin{figure}[ht]
     \onecolumn
