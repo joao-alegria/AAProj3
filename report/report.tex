@@ -107,7 +107,7 @@ In this chapter we discuss the implementation of both solutions for the use case
 
 \subsection{Exact Counter}
 
-The exact counter is the gold standard when creating alternative solutions that save time, memory or other resource at the cost of precision.
+The exact counter (or EC) is the gold standard when creating alternative solutions that save time, memory or other resource at the cost of precision.
 It is by the values computed by it that the other counters are evaluated.
 
 Its implementation consists of a regular dictionary of words as keys and counts as values, constantly updated as new words appear on the text stream.
@@ -132,7 +132,7 @@ The implementation of our CM Sketch was taken from the resources made available 
 As it served perfectly for our purposes, we found it unreasonable to reach our own implementation at the risk of adding imperfections that could compromise our study.
 Nevertheless, we offer a description of how it works and how we introduced it to the use case.
 
-If the same conditions defined in the Exact Counter are verified for the current word on the text stream, the word is passed to the \textit{update()} method of 
+If the same conditions defined in the EC are verified for the current word on the text stream, the word is passed to the \textit{update()} method of 
 the \texttt{CountMinSketch} class.
 This method then applies all its hash functions to the word and increments the values on the hash tables on the respective entries.
 
@@ -146,19 +146,30 @@ The first regulates how significant is the overestimation since only the smalles
 smallest will be the difference between the real count and the one returned.
 The second reduces the probability of collisions since more hash tables means more complex hashes less likely to be equal.
 Two alternative parameters could have been used, \texttt{delta} and \texttt{epsilon}, that regulate the probability of query error and the query error factor 
-and internally define \texttt{m} and \texttt{d} but in our case we sticked with the first two.
+and internally define \texttt{m} and \texttt{d} but in our case we sticked with the first two. 
 
-In relations to the hash functions used, they have the same basis and over that a differencing operation is perform to achieve as many hash functions asked from the user. The Python library \texttt{hashlib} \cite{hashlib} is used to generate secure hashes and digests, being the most used features its MD5 function and a hexadecimal digest. The dataflow of the hashing process goes as follows: firstly a base is created by generating a MD5 digest over the hash of the provided string; then for each one of the hash functions needed, the MD5 digest is updated with the successive indicators of the hash functions(from 0 to N) until the wanted function is reached, then the hexadecimal digest is created, converted to an integer and applied the modulus based on the size of the hash tables.
+With regards to the hash functions used, the way they are generated differently from each other is simple yet very effective.
+All functions have the same functional basis, but for each one a different operation is performed in the end according to the number of desired functions.
+It is this operation that makes them all unique and therefore useful for the program.
+The dataflow of the hashing process goes as follows: 
+firstly a base is created by generating a MD5 digest over the hash of the provided string; 
+then, for each hash function needed, the MD5 digest is updated with the successive indicators of the hash functions (from 0 to N) until the wanted function is reached;
+finally the hexadecimal digest is created, converted to an integer and applied the modulus based on the hash tables' size.
 
-In this process the successive addition of the hash function indicators is the portion that enables the creation of several hash function, since by starting from a base hash and adding always the same N numbers, it is equivalent of having N different hash function. The portion of code that calculates the hexadecimal digest and executes the modulus based on the size of the hash tables is the code that certifies that a valid index is always generated, since assuming that the hash tables have a size of K, the modulus of any number by K will return only values in the range [0, K-1]. 
+In this process the successive addition of the hash function indicators is the portion that enables the creation of several hash function, since by starting 
+from a base hash and adding always the same N numbers, it is equivalent of having N different hash function. 
+The portion of code that calculates the hexadecimal digest and executes the modulus based on the size of the hash tables is the code that certifies that a 
+valid index is always generated, since, assuming that the hash tables have a size of K, the modulus of any number by K will return only values in the range [0, K-1]. 
+The Python library \texttt{hashlib} \cite{hashlib} is used to generate secure hashes and digests, being the MD5 function and the Hexadecimal digest the most used features.
 
 \section{Literary Study} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 As a form of automation and to enable us to quickly study the behavior of the chosen algorithm, we created a script in Python that allows us to change some of 
 the necessary parameters and run the solution for a given input stream in a straightforward, command-based manner.
-The signature of our script is as follows:
+We leave here the signature of our script.
 
-\vspace{-5pt}
+\newpage
+%\vspace{-5pt}
 \begin{center}
     \begin{verbatim}
     python3 frequentWordFinder.py [-h]
@@ -178,9 +189,10 @@ since that will generate the best results, without any noise form the headers an
 
 What we did to study the performance of CM Sketch was to record its results for various inputs and parameter combinations and resort to data visualization tools 
 to understand its behavior.
-The tested inputs were all of the literary works from our dataset, and the tested parameters were combinations of \texttt{numColumns} within the range [200,4000] 
-and \texttt{numHash} within the range [1,10].
+All dataset's literary works were put to test, and the tested parameters were combinations of \texttt{numColumns} within the range [200,4000] and 
+\texttt{numHash} within the range [1,10].
 
+\vspace{-5pt}
 \begin{equation}
     E_{r} = \frac{E}{X} \times 100
     \label{eq:1}
@@ -189,22 +201,6 @@ and \texttt{numHash} within the range [1,10].
 The exact count is considered to compute both the error of the approximate count and its relative error.
 The error ($E$) of an estimation for a word is defined as the difference between its exact count ($X$) in the text stream and the count given by the Sketch.
 The relative error ($E_r$) corresponds to the error percentage given by equation \ref{eq:1}.
-
-\section{Results \& Discussion} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The first analysis we did was on the words considered most frequent by CM Sketch and how accurate were its count estimations.
-This is possible to do by reading the bar charts present in figures \ref{fig:columnSketchComp} and \ref{fig:hashSketchComp}.
-These bar charts present the counts of both solutions in descending order of the top 20 words's exact counts on the data stream; 
-they allow to see which \texttt{CountMinSketch} configurations offer reasonably good results.
-................
-
-Figures \ref{fig:columnStudy} and \ref{fig:hashStudy}, on the other hand, present two line charts that follow the evolution of the average error associated to 
-the Sketch counts according to the parameters \textit{numHash} and \textit{numColumns}, respectively.
-................
-
-In table \ref{tab:alice2000_5}, we present an output example for the book \textit{Alice in the Wonderland}, by Lewis Carol, written in English.
-Here, CM Sketch was instantiated with a hash table of 2000 columns and 5 hash functions.
-................
 
 \begin{figure}[h]
     \centering
@@ -222,42 +218,50 @@ Here, CM Sketch was instantiated with a hash table of 2000 columns and 5 hash fu
     \label{fig:hashStudy}
 \end{figure}
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|l|l|l|l|l|}
-    \hline
-    Words     & All & Sketch & SA Abs Err & SA Rel Err (\%) \\ \hline
-    said    & 462 & 462    & 0           & 0           \\ \hline
-    alice   & 397 & 397    & 0           & 0           \\ \hline
-    little  & 128 & 128    & 0           & 0           \\ \hline
-    one     & 104 & 104    & 0           & 0           \\ \hline
-    know    & 87  & 90     & 3           & 3.45        \\ \hline
-    like    & 85  & 85     & 0           & 0           \\ \hline
-    went    & 83  & 83     & 0           & 0           \\ \hline
-    queen   & 75  & 75     & 0           & 0           \\ \hline
-    thought & 74  & 76     & 2           & 2.7         \\ \hline
-    time    & 71  & 71     & 0           & 0           \\ \hline
-    see     & 67  & 67     & 0           & 0           \\ \hline
-    well    & 63  & 64     & 1           & 1.59        \\ \hline
-    can     & 63  & 63     & 0           & 0           \\ \hline
-    king    & 63  & 63     & 0           & 0           \\ \hline
-    don     & 61  & 61     & 0           & 0           \\ \hline
-    now     & 60  & 60     & 0           & 0           \\ \hline
-    turtle  & 59  & 59     & 0           & 0           \\ \hline
-    began   & 58  & 59     & 1           & 1.72        \\ \hline
-    ll      & 57  & 57     & 0           & 0           \\ \hline
-    way     & 56  & 56     & 0           & 0           \\ \hline
-    \end{tabular}
-    \caption{English Alice Results(2000 cols,5 hash)}
-    \label{tab:alice2000_5}
-\end{table}
+\section{Results \& Discussion} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+It is possible to determine how accurate are CM Sketch's count estimations by reading the bar charts present in figures \ref{fig:columnSketchComp} and \ref{fig:hashSketchComp}.
+These charts present the top 20 words' exact counts on the data stream of both solutions in descending order; 
+they allow to see which \texttt{CountMinSketch} configurations offer good results.
+
+Our verdict was that over 1000 columns the gains were not noticeable and at least 5 hash function are recommended, although more than that also did not benefit that much.
+Unfortunately the words and exact values are very hard to read from the plots, so we also make available table \ref{tab:1}.
+Here, CM Sketch's configuration is of 200 columns only and 5 hash functions, and as the reader can see the results are far from impressive.
+
+Figures \ref{fig:columnStudy} and \ref{fig:hashStudy}, present two line charts that follow the evolution of the average error associated to the Sketch counts 
+according to the parameters \textit{numHash} and \textit{numColumns}, respectively.
+These evolutions also help us understand the algorithm's behavior and are good instruments to use when choosing the parameters configuration for a given context.
+
+In table \ref{tab:2}, we present an output example for the book \textit{Alice in the Wonderland}, by Lewis Carol, written in English.
+There are a few abbreviations to take into account when reading the table: EC and CM stand for Exact Counter and Count-Min (Sketch); MA Err and MR Err stand for 
+Mean Average Error and Mean Relative Error.
+Here, CM Sketch was instantiated with a hash table of 2000 columns and 5 hash functions, values chosen once the previously mentioned line charts were analysed.
+The truth is that with balanced parameter values, the solution was impressively accurate and returned very good estimations of the total counts of the most frequent words.
+\newline
+
+Our experiments on translations comparison made us further explore aspects discussed in our previous works.
+The error associated to CM Sketch's estimations was confirmed to have no significant variation amongst translations; 
+this was expected, as an approximate counting algorithm should be agnostic to semantic characteristics of the objects they are counting.
+
+The presence of terms such as "said" or "replied" throughout most books and translations suggests that the books have a strong conversational component.
+
+Also, we were able to detect character names and other story-related terms such as "Queen" (in \textit{Alice in the Wonderland}) or "Ghost" (in \textit{A Christmas Carol})
+amongst the most frequent words of all translations; for those who know the tails, this is somewhat amusing, as it seems like we are reading a sort of movie 
+trailer just by looking at the top words.
+
+One final observation we made was that a few languages have a wider vocabulary, with Finnish having almost 6 times the number of unique words as English.
+A consequence of this was that usually the counts from books translated in Finnish were usually lower than those of other languages.
+
+Note that the conclusions here presented are the result of speculations based on the few books analysed.
+Ideally, this linguistic study would have done with access to a larger dataset.
+Nevertheless, we believe they are based on solid interpretations of the data and therefore have value worth stating.
 
 \begin{table}[!htb]
     \begin{subtable}{.5\linewidth}
         \centering
         \begin{tabular}{|l|l|}
             \hline
-            Key     & All \\ \hline
+            Words     & EC \\ \hline
             said    & 462 \\ \hline
             alice   & 397 \\ \hline
             little  & 128 \\ \hline
@@ -279,13 +283,13 @@ Here, CM Sketch was instantiated with a hash table of 2000 columns and 5 hash fu
             ll      & 57  \\ \hline
             mock    & 56  \\ \hline
         \end{tabular}
-        \caption{Exact Counts}
+        \caption{Exact Counts.}
     \end{subtable}%
     \begin{subtable}{.5\linewidth}
         \centering 
         \begin{tabular}{|l|l|}
             \hline
-            Key     & Sketch \\ \hline
+            Words     & Sketch \\ \hline
             said    & 473    \\ \hline
             alice   & 414    \\ \hline
             little  & 154    \\ \hline
@@ -307,22 +311,53 @@ Here, CM Sketch was instantiated with a hash table of 2000 columns and 5 hash fu
             king    & 91     \\ \hline
             first   & 91     \\ \hline
         \end{tabular}
-        \caption{Sketch Counts}
+        \caption{Sketch Counts.}
     \end{subtable} 
-    \caption{Sketch Comparison}
+    \caption{CM Sketch comparison with EC.}
+    \label{tab:1}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Words     & EC & CM & M A Err & M R Err \\ \hline
+    said    & 462 & 462    & 0           & 0           \\ \hline
+    alice   & 397 & 397    & 0           & 0           \\ \hline
+    little  & 128 & 128    & 0           & 0           \\ \hline
+    one     & 104 & 104    & 0           & 0           \\ \hline
+    know    & 87  & 90     & 3           & 3.45        \\ \hline
+    like    & 85  & 85     & 0           & 0           \\ \hline
+    went    & 83  & 83     & 0           & 0           \\ \hline
+    queen   & 75  & 75     & 0           & 0           \\ \hline
+    thought & 74  & 76     & 2           & 2.7         \\ \hline
+    time    & 71  & 71     & 0           & 0           \\ \hline
+    see     & 67  & 67     & 0           & 0           \\ \hline
+    well    & 63  & 64     & 1           & 1.59        \\ \hline
+    can     & 63  & 63     & 0           & 0           \\ \hline
+    king    & 63  & 63     & 0           & 0           \\ \hline
+    don     & 61  & 61     & 0           & 0           \\ \hline
+    now     & 60  & 60     & 0           & 0           \\ \hline
+    turtle  & 59  & 59     & 0           & 0           \\ \hline
+    began   & 58  & 59     & 1           & 1.72        \\ \hline
+    ll      & 57  & 57     & 0           & 0           \\ \hline
+    way     & 56  & 56     & 0           & 0           \\ \hline
+    \end{tabular}
+    \caption{English Alice Results (2000 cols,5 hash).}
+    \label{tab:2}
 \end{table}  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
-\textbf{ }
+% \newpage
+% \textbf{ }
 \newpage
 \section{Conclusion}
 
 Reducing memory usage while maintaining accuracy on determining the most frequent words on a text stream is not a trivial task.
 Hash functions offer a great benefit by allowing solutions to not have to store the words being counted, but they bring the problem of different words 
 returning the same hash, resulting in counting collisions.
-Managing this brings complexity to any solution that takes advantage of such memory saving strategy.
+Managing this brings complexity to any solution that takes advantage of such memory saving strategy. 
 
 Count-Min Sketch proved to be able to determine the most frequent words with a very high precision with much less memory usage than an exact counter.
 And, by studying the evolution of the algorithm's behavior for different configurations, we were able to achieve a balanced solution for the dataset available.

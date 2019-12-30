@@ -22,4 +22,9 @@ Python~SW Foundation,
 \newblock ``Pypi - stop-words'',
 \newblock \url{https://pypi.org/project/stop-words/}.
 
+\bibitem{hashlib}
+Python~SW Foundation,
+\newblock ``hashlib — secure hashes and message digests'',
+\newblock \url{https://docs.python.org/3.8/library/hashlib.html}.
+
 \end{thebibliography}
